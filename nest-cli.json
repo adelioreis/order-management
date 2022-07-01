@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/order-management/src",
+  "monorepo": true,
+  "root": "apps/order-management",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/order-management/tsconfig.app.json"
+  },
+  "projects": {
+    "order-management": {
+      "type": "application",
+      "root": "apps/order-management",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-management/tsconfig.app.json"
+      }
+    },
+    "crud": {
+      "type": "application",
+      "root": "apps/crud",
+      "entryFile": "main",
+      "sourceRoot": "apps/crud/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crud/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    }
+  }
+}
