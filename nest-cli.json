@@ -1,29 +1,20 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/order-management/src",
+  "sourceRoot": "apps/default/src",
   "monorepo": true,
-  "root": "apps/order-management",
+  "root": "apps/default",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/order-management/tsconfig.app.json"
+    "tsConfigPath": "apps/default/tsconfig.app.json"
   },
   "projects": {
-    "order-management": {
+    "default": {
       "type": "application",
-      "root": "apps/order-management",
+      "root": "apps/default",
       "entryFile": "main",
-      "sourceRoot": "apps/order-management/src",
+      "sourceRoot": "apps/default/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/order-management/tsconfig.app.json"
-      }
-    },
-    "crud": {
-      "type": "application",
-      "root": "apps/crud",
-      "entryFile": "main",
-      "sourceRoot": "apps/crud/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/crud/tsconfig.app.json"
+        "tsConfigPath": "apps/default/tsconfig.app.json"
       }
     },
     "auth": {
@@ -33,6 +24,24 @@
       "sourceRoot": "apps/auth/src",
       "compilerOptions": {
         "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "lib-base": {
+      "type": "library",
+      "root": "libs/lib-base",
+      "entryFile": "index",
+      "sourceRoot": "libs/lib-base/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/lib-base/tsconfig.lib.json"
+      }
+    },
+    "order": {
+      "type": "application",
+      "root": "apps/order",
+      "entryFile": "main",
+      "sourceRoot": "apps/order/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order/tsconfig.app.json"
       }
     }
   }
